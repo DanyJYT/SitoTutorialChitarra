@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercizi per Chitarra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      font-size: 24px;
+      position: relative;
+      z-index: 1001;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    /* Forza tutti i link a essere bianchi e, al passaggio del mouse, diventano #bbbbbb con sottolineatura */
+    a, a:link, a:visited {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover, a:active {
+      color: #bbbbbb;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 800px;
+      margin: 120px auto 20px;
+      padding: 20px;
+      background: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .card {
+      padding: 15px;
+      border: 1px solid #444;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background: #222;
+      transition: transform 0.3s ease;
+      text-align: left;
+      max-width: 750px;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>Esercizi per Chitarra</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teoria.html">Teoria</a>
+    <a href="esercizi.html">Esercizi</a>
+    <a href="accordi.html">Accordi</a>
+    <a href="tabs.html">Tabs</a>
+  </nav>
+
+  <!-- Sezione: Riscaldamento -->
+  <div class="container">
+    <h2><a href="esercizi_riscaldamento.html" target="_blank">Riscaldamento</a></h2>
+    <p>Esercizi per sciogliere le dita e migliorare la coordinazione.</p>
+  </div>
+
+  <!-- Sezione: Scale (in generale) -->
+  <div class="container">
+    <h2><a href="esercizi_scale.html" target="_blank">Scale</a></h2>
+    <p>Esercizi sulle scale per migliorare la fluidità, la tecnica e il senso armonico.</p>
+  </div>
+
+  <!-- Sezione: Esercizi dell'Orecchio -->
+  <div class="container">
+    <h2><a href="esercizi_orecchio.html" target="_blank">Esercizi dell'Orecchio</a></h2>
+    <p>Allenati a riconoscere tonalità, intervalli e armonie con esercizi dedicati all'ascolto.</p>
+  </div>
+
+  <!-- Sezione: Creatività e Improvvisazione -->
+  <div class="container">
+    <h2><a href="esercizi_creativita.html" target="_blank">Creatività &amp; Improvvisazione</a></h2>
+    <p>Esercizi per stimolare la creatività e migliorare l’improvvisazione sulla chitarra.</p>
+  </div>
+
+  <!-- Sezione: Sfida Settimanale -->
+  <div class="container">
+    <h2>Sfida Settimanale</h2>
+    <p>Mettiti alla prova con la sfida di questa settimana:</p>
+    <div class="card">
+      <h3><a href="sfida_settimana.html" target="_blank">Sfida Settimana</a></h3>
+      <p>Supera la sfida proposta per migliorare la tua tecnica e la tua creatività.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tutorial Chitarra. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>

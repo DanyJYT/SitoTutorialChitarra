@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs per Chitarra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      font-size: 24px;
+      position: relative;
+      z-index: 1001;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    nav a {
+      /* Non necessario se definito globalmente, ma lasciato per chiarezza */
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    /* Forza tutti i link a essere bianchi in stato normale */
+    a, a:link, a:visited {
+      color: white;
+      text-decoration: none;
+    }
+    /* Stato hover per indicare la cliccabilità */
+    a:hover, a:active {
+      color: #bbbbbb;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 800px;
+      margin: 120px auto 20px;
+      padding: 20px;
+      background: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .card {
+      padding: 15px;
+      border: 1px solid #444;
+      margin: 10px auto;
+      border-radius: 5px;
+      background: #222;
+      text-align: left;
+      max-width: 750px;
+    }
+    ul.tabs-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    ul.tabs-list li {
+      margin: 8px 0;
+    }
+    ol.approfondimenti {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 600px;
+      padding-left: 20px;
+    }
+    ol.approfondimenti li {
+      margin: 8px 0;
+    }
+    footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>Tabs per Chitarra</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teoria.html">Teoria</a>
+    <a href="esercizi.html">Esercizi</a>
+    <a href="accordi.html">Accordi</a>
+    <a href="tabs.html">Tabs</a>
+  </nav>
+
+  <!-- Sezione: Come leggere le tablature -->
+  <div class="container section">
+    <h2>Come leggere le Tablature</h2>
+    <p>Scopri le basi per interpretare le tablature con queste mini lezioni:</p>
+    <div class="card">
+      <h3><a href="tabs_intro.html" target="_blank">Introduzione alle Tablature</a></h3>
+      <p>Le tablature sono un sistema di notazione semplice per chitarra. In questa lezione imparerai la struttura base e il significato dei numeri.</p>
+    </div>
+    <div class="card">
+      <h3><a href="tabs_simboli.html" target="_blank">Simboli e Tecniche</a></h3>
+      <p>Approfondisci i simboli per bending, slide, hammer-on e pull-off. Scopri come interpretarli per rendere la tua esecuzione più espressiva.</p>
+    </div>
+    <div class="card">
+      <h3><a href="tabs_lettura.html" target="_blank">Lettura e Pratica</a></h3>
+      <p>Impara a leggere sequenze di numeri e a trasformarle in note sulla tastiera. Esercitati con esempi pratici per migliorare la tua tecnica.</p>
+    </div>
+  </div>
+
+  <!-- Sezione: Tablature per Canzoni -->
+  <div class="container section">
+    <h2>Tablature per Canzoni</h2>
+    <p>Accedi e condividi tablature per le tue canzoni preferite:</p>
+    <ul class="tabs-list">
+      <li><a href="tablatura1.pdf" target="_blank">Tablatura: "Canzone Facile 1"</a></li>
+      <li><a href="tablatura2.pdf" target="_blank">Tablatura: "Canzone Facile 2"</a></li>
+      <li><a href="tablatura3.pdf" target="_blank">Tablatura: "Canzone Popolare"</a></li>
+      <!-- Aggiungi ulteriori link o integra un form per il caricamento -->
+    </ul>
+  </div>
+
+  <!-- Sezione: Approfondimenti Tecnici -->
+  <div class="container section">
+    <h2>Approfondimenti Tecnici</h2>
+    <p>Esplora ulteriori risorse per padroneggiare le tablature e le tecniche avanzate:</p>
+    <ol class="approfondimenti">
+      <li><a href="tabs_glossario.html" target="_blank">Glossario dei Simboli</a></li>
+      <li><a href="tabs_tecniche.html" target="_blank">Tecniche Avanzate di Tablatura</a></li>
+      <li><a href="tabs_consigli.html" target="_blank">Consigli Pratici per la Lettura</a></li>
+    </ol>
+  </div>
+
+  <!-- Sezione: Sfide Settimanali -->
+  <div class="container section">
+    <h2>Sfide Settimanali</h2>
+    <p>Mettiti alla prova e migliora con le nostre sfide settimanali:</p>
+    <div class="card">
+      <h3><a href="sfida1.html" target="_blank">Sfida Settimana 1</a></h3>
+      <p>Prova a suonare "Canzone Sfida 1" e condividi il tuo video per ricevere feedback!</p>
+    </div>
+    <div class="card">
+      <h3><a href="sfida2.html" target="_blank">Sfida Settimana 2</a></h3>
+      <p>Impara "Canzone Sfida 2" e confronta i tuoi progressi con quelli degli altri utenti.</p>
+    </div>
+    <!-- Aggiungi ulteriori sfide settimanali se necessario -->
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tutorial Chitarra. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria Musicale - Percorso di Lezioni Approfondite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        /* Header e navigazione */
+        header {
+          background-color: #1f1f1f;
+          padding: 20px;
+          font-size: 24px;
+          position: relative;
+          z-index: 1001;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        /* Contenitore principale */
+        .container {
+            max-width: 1000px;
+            margin: 120px auto 20px; /* Spazio per evitare sovrapposizioni con il nav */
+            padding: 20px;
+            background: #1f1f1f;
+            border-radius: 10px;
+        }
+        /* Micro sezioni per le lezioni */
+        .micro-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .micro-section:hover {
+            background-color: #222;
+        }
+        .lesson-link {
+            color: white; /* Testo cliccabile in bianco */
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .lesson-link:hover {
+            color: grey; /* Diventa grigio al passaggio del mouse */
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sezioni: header e navigazione -->
+    <header>Teoria Musicale - Percorso di Lezioni Approfondite</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="teoria.html">Teoria</a>
+        <a href="esercizi.html">Esercizi</a>
+        <a href="accordi.html">Accordi</a>
+        <a href="tabs.html">Tabs</a>
+    </nav>
+
+    <!-- Contenuto principale con le micro sezioni per ogni lezione -->
+    <div class="container">
+        <h2>Seleziona una Lezione</h2>
+        <div class="micro-section">
+            <a href="lezione1_fondamenti.html" class="lesson-link">Lezione 1: Fondamenti della Teoria Musicale</a>
+            <p class="description">Introduzione alle note, agli intervalli e alla scala cromatica per gettare le basi della teoria.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione2_scale_modi.html" class="lesson-link">Lezione 2: Scale e Modi</a>
+            <p class="description">Analisi delle scale maggiori, minori, pentatoniche, blues e introduzione ai modi per l’improvvisazione.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione3_accordi_armonia.html" class="lesson-link">Lezione 3: Accordi e Armonia</a>
+            <p class="description">Costruzione degli accordi, funzioni armoniche e progressioni per accompagnare e armonizzare i brani.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione4_ritmo_tempo.html" class="lesson-link">Lezione 4: Ritmo, Tempo e Notazione Musicale</a>
+            <p class="description">Studio delle figure ritmiche, suddivisioni e lettura del pentagramma e delle tablature.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione5_intervalli.html" class="lesson-link">Lezione 5: Intervalli e Relazioni Armoniche</a>
+            <p class="description">Approfondimento del riconoscimento degli intervalli e armonizzazione delle scale per creare progressioni efficaci.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione6_improvvisazione.html" class="lesson-link">Lezione 6: Applicazioni Pratiche e Improvvisazione</a>
+            <p class="description">Tecniche di improvvisazione, fraseggio e applicazione pratica di scale e accordi in contesti reali.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione7_stili.html" class="lesson-link">Lezione 7: Stili Musicali e Analisi di Chitarristi Famosi</a>
+            <p class="description">Esplorazione dei principali generi musicali e analisi degli stili dei grandi chitarristi per ispirare il tuo playing.</p>
+        </div>
+        <div class="micro-section">
+            <a href="lezione8_composizione.html" class="lesson-link">Lezione 8: Progetti di Composizione e Arrangiamento</a>
+            <p class="description">Strumenti e tecniche per comporre e arrangiare brani originali, mettendo in pratica tutta la teoria appresa.</p>
+        </div>
+    </div>
+</body>
+</html>

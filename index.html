@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Chitarra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+    /* Navigation fissa */
+    nav {
+      background: #333;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    /* Hero Section con immagine di sfondo */
+    .hero {
+    display: flex;
+    justify-content: center; /* Centra il contenuto */
+    align-items: center; /* Centra il contenuto verticalmente */
+    height: 600px; /* Aumenta l'altezza per immagini verticali */
+    background: url('kirk.jpg') no-repeat center center; /* Centra l'immagine */
+    background-size: contain; /* Evita che venga tagliata */
+    background-color: #121212; /* Colore di sfondo se l'immagine non riempie tutto */
+    margin-top: 50px; /* Spazio per il menu fisso */
+    }
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+    .hero-overlay h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #ffffff;
+    }
+    /* Contenitore per le sezioni */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      /* Se desideri impostare un'immagine come sfondo del testo, rimuovi il background attuale e decommenta la riga sottostante */
+      /* background: url('small-background.jpg') no-repeat center center; background-size: cover; */
+      position: relative;
+    }
+    /* Sezioni interne */
+    .section {
+      padding: 60px 20px;
+    }
+    h2 {
+      color: #ffffff;
+    }
+    /* Card per novità e aggiornamenti */
+    .card {
+      padding: 15px;
+      border: 1px solid #444;
+      margin: 10px;
+      border-radius: 5px;
+      background: #222;
+      display: inline-block;
+      width: calc(45% - 20px);
+      vertical-align: top;
+      text-align: left;
+    }
+    /* Stile per i link nelle card */
+    .card a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .card {
+        width: calc(90% - 20px);
+      }
+    }
+    footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation in alto -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teoria.html">Teoria</a>
+    <a href="esercizi.html">Esercizi</a>
+    <a href="accordi.html">Accordi</a>
+    <a href="tabs.html">Tabs</a>
+  </nav>
+
+  <!-- Hero Section: immagine di sfondo con overlay del titolo -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Benvenuta nella tua avventura</h1>
+    </div>
+  </div>
+
+  <!-- Descrizione e anteprima del sito -->
+  <div class="container section">
+    <h2>Impara a suonare la chitarra ora!</h2>
+    <p>Benvenuta! Qui troverai tutto il necessario per imparare a suonare la chitarra: teoria, esercizi, accordi e tabs. Esplora le sezioni per iniziare il tuo percorso musicale.</p>
+  </div>
+
+  <!-- Area novità e aggiornamenti -->
+  <div class="container section">
+    <h2>Novità e Aggiornamenti</h2>
+    <div class="card">
+      <a href="tutorial_video.html">
+        <h3>Nuovo Tutorial Video</h3>
+        <p>Guarda il nostro ultimo video per migliorare la tecnica di fingerpicking.</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="esercizio_giorno.html">
+        <h3>Esercizio del Giorno</h3>
+        <p>Prova questo esercizio per potenziare la destrezza delle dita.</p>
+      </a>
+    </div>
+    <!-- Aggiungi ulteriori card cliccabili se necessario -->
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tutorial Chitarra. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>
