@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Musicale</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        /* Header e navigazione */
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            font-size: 24px;
+            position: relative;
+            z-index: 1001;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        /* Per evitare che il contenuto sia coperto dalla barra fissa */
+        .content {
+            margin-top: 60px;
+        }
+        @media (max-width: 600px) {
+    .content {
+        margin-top: 100px; /* Più spazio sopra il contenuto sui dispositivi mobili */
+
+    }
+    #score {
+    font-size: 18px;
+    margin-top: 15px;
+    display: none; /* Lo rendiamo visibile solo quando serve */
+}
+.container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="teoria.html">Teoria</a>
+        <a href="esercizi.html">Esercizi</a>
+        <a href="accordi.html">Accordi</a>
+        <a href="tabs.html">Tabs</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <div class="content">
+        <div id="section-selection">
+            <h2>Scegli una sezione:</h2>
+            <select id="section-selector"></select>
+            <button onclick="startQuiz()">Inizia Quiz</button>
+        </div>
+
+        <div class="quiz-container" style="display: none;">
+            <h2 id="question-text"></h2>
+            <div id="answers"></div>
+            <button id="next-btn" onclick="nextQuestion()">Prossima</button>
+            <button id="restart-btn" onclick="restartQuiz()">Ricomincia</button>
+            <p id="score">Punteggio:</p>
+        </div>
+        <div class="container">
+      <h1>Test</h1>
+      <p>Rispondi e vediamo quanto sai!</p>
+
+      <!-- Google Form Embed -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSH44Lmy1cU64svVqMJ28nhhY3YzCjAN6xaxJpaIOvZ0s5CA/viewform?embedded=true" width="640" height="456" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>  </div
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

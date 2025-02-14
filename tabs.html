@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <link rel="icon" type="image/png" href="guitar.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabs per Chitarra</title>
@@ -92,12 +93,34 @@
     ol.approfondimenti li {
       margin: 8px 0;
     }
-    footer {
-      background-color: #1f1f1f;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
+    input {
+       width: 90%;
+       padding: 10px;
+       margin-bottom: 20px;
+       border-radius: 5px;
+       border: 1px solid #444;
+       background: #222;
+       color: white;
+     }
+     table {
+       width: 100%;
+       border-collapse: collapse;
+       background: #222;
+     }
+     th, td {
+       padding: 10px;
+       border: 1px solid #444;
+       text-align: left;
+     }
+     th {
+       background: #333;
+     }
+     footer {
+       background-color: #1f1f1f;
+       padding: 20px;
+       font-size: 14px;
+       margin-top: 40px;
+     }
   </style>
 </head>
 <body>
@@ -108,6 +131,7 @@
     <a href="esercizi.html">Esercizi</a>
     <a href="accordi.html">Accordi</a>
     <a href="tabs.html">Tabs</a>
+    <a href="quiz.html">Quiz</a>
   </nav>
 
   <!-- Sezione: Come leggere le tablature -->
@@ -115,7 +139,7 @@
     <h2>Come leggere le Tablature</h2>
     <p>Scopri le basi per interpretare le tablature con queste mini lezioni:</p>
     <div class="card">
-      <h3><a href="tabs_intro.html" target="_blank">Introduzione alle Tablature</a></h3>
+      <h3><a href="introduzione_tablature.html" target="_blank">Introduzione alle Tablature</a></h3>
       <p>Le tablature sono un sistema di notazione semplice per chitarra. In questa lezione imparerai la struttura base e il significato dei numeri.</p>
     </div>
     <div class="card">
@@ -131,14 +155,99 @@
   <!-- Sezione: Tablature per Canzoni -->
   <div class="container section">
     <h2>Tablature per Canzoni</h2>
-    <p>Accedi e condividi tablature per le tue canzoni preferite:</p>
-    <ul class="tabs-list">
-      <li><a href="tablatura1.pdf" target="_blank">Tablatura: "Canzone Facile 1"</a></li>
-      <li><a href="tablatura2.pdf" target="_blank">Tablatura: "Canzone Facile 2"</a></li>
-      <li><a href="tablatura3.pdf" target="_blank">Tablatura: "Canzone Popolare"</a></li>
-      <!-- Aggiungi ulteriori link o integra un form per il caricamento -->
-    </ul>
-  </div>
+   <input type="text" id="searchBar" placeholder="Cerca una canzone..." onkeyup="filterTabs()">
+   <select id="genreFilter" onchange="filterTabs()">
+     <option value="">Tutti i generi</option>
+     <option value="rock">Rock</option>
+     <option value="rock-alternativo">Rock Alternativo</option>
+     <option value="heavy metal">Heavy Metal</option>
+     <option value="doom metal">Doom Metal</option>
+     <option value="folk rock">Folk Rock</option>
+     <option value="classic rock">Classic Rock</option>
+     <option value="britpop">Britpop</option>
+     <option value="hard rock">Hard Rock</option>
+     <option value="grunge">Grunge</option>
+     <option value="southern rock">Southern Rock</option>
+     <option value="acoustic pop">Acoustic Pop</option>
+     <option value="garage rock">Garage Rock</option>
+     <option value="punk rock">Punk Rock</option>
+     <option value="trash metal">Trash Metal</option>
+     <option value="indie rock">Indie Rock</option>
+     <option value="post-grunge">Post-Grunge</option>
+     <option value="metal">Metal</option>
+     <option value="pop">Pop</option>
+   </select>
+   <select id="difficultyFilter" onchange="filterTabs()">
+     <option value="">Tutte le difficoltà</option>
+     <option value="facile">Facile</option>
+     <option value="intermedio">Intermedio</option>
+     <option value="difficile">Difficile</option>
+     <option value="molto difficile">Difficile</option>
+
+   </select>
+   <select id="artistFilter" onchange="filterTabs()">
+  <option value="">Tutti gli artisti</option>
+  <option value="Oasis">Oasis</option>
+  <option value="Black Sabbath">Black Sabbath</option>
+  <option value="Nirvana">Nirvana</option>
+  <option value="AC/DC">AC/DC</option>
+  <option value="Ed Sheeran">Ed Sheeran</option>
+  <option value="Metallica">Metallica</option>
+  <option value="Bob Dylan">Bob Dylan</option>
+  <option value="Guns 'N Roses">Guns 'N Roses</option>
+  <option value="Ozzy Osbourne">Ozzy Osbourne</option>
+  <option value="Muse">Muse</option>
+  <option value="Vance Joy">Vance Joy</option>
+  <option value="The Neighbourhood">The Neighbourhood</option>
+  <option value="The Cranberries">The Cranberries</option>
+  <option value="Judas Priest">Judas Priest</option>
+  <option value="Artic Monkeys">Artic Monkeys</option>
+  <option value="Radiohead">Radiohead</option>
+  <option value="The White Stripes">The White Stripes</option>
+  <option value="Ramones">Ramones</option>
+
+</select>
+   <table>
+  <thead>
+    <tr>
+      <th>Canzone</th>
+      <th>Artista</th>
+      <th>Genere</th>
+      <th>Difficoltà</th>
+      <th>Tab</th>
+    </tr>
+  </thead>
+  <tbody id="tabsTable">
+    <tr class="rock facile"><td>Wonderwall</td><td>Oasis</td><td>Britpop/Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab1.html" target="_blank">Apri</a></td></tr>
+    <tr class="metal facile"><td>Paranoid</td><td>Black Sabbath</td><td>Metal/Heavy Metal/Doom Metal</td><td>Facile</td><td><a href="tabs/tab2.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock facile"><td>Knocking on Heaven's Door</td><td>Bob Dylan/Guns 'N Roses</td><td>Folk Rock/Classic Rock</td><td>Facile</td><td><a href="tabs/tab3.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock facile"><td>Song 2</td><td>Blur</td><td>Britpop/Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab4.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock facile"><td>Smoke on the Water</td><td>Deep Purple</td><td>Hard Rock/Classic Rock</td><td>Facile</td><td><a href="tabs/tab5.html" target="_blank">Apri</a></td></tr>
+    <tr class="grunge facile"><td>Come as You Are</td><td>Nirvana</td><td>Grunge/Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab6.html" target="_blank">Apri</a></td></tr>
+    <tr class="grunge facile"><td>Smells Like Teen Spirit</td><td>Nirvana</td><td>Grunge/Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab7.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock intermedio"><td>Sweet Home Alabama</td><td>Lynyrd Skynyrd</td><td>Southern Rock/Classic Rock</td><td>Intermedio</td><td><a href="tabs/tab8.html" target="_blank">Apri</a></td></tr>
+    <tr class="pop facile"><td>Perfect</td><td>Ed Sheeran</td><td>Pop/Acoustic Pop</td><td>Facile</td><td><a href="tabs/tab9.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock intermedio"><td>Highway to Hell</td><td>AC/DC</td><td>Hard Rock</td><td>Intermedio</td><td><a href="tabs/tab10.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock facile"><td>Seven Nation Army</td><td>The White Stripes</td><td>Garage Rock/Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab11.html" target="_blank">Apri</a></td></tr>
+    <tr class="alternative facile"><td>Creep</td><td>Radiohead</td><td>Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab12.html" target="_blank">Apri</a></td></tr>
+    <tr class="punk facile"><td>Blitzkrieg Bop</td><td>Ramones</td><td>Punk Rock</td><td>Facile</td><td><a href="tabs/tab13.html" target="_blank">Apri</a></td></tr>
+    <tr class="metal intermedio"><td>Enter Sandman</td><td>Metallica</td><td>Trash Metal/Heavy Metal</td><td>Intermedio</td><td><a href="tabs/tab14.html" target="_blank">Apri</a></td></tr>
+    <tr class="metal facile"><td>Iron Man</td><td>Black Sabbath/Ozzy Osbourne</td><td>Heavy Metal</td><td>Facile</td><td><a href="tabs/tab15.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock facile"><td>I Wanna Be Yours</td><td>Artic Monkeys</td><td>Indie Rock/Garage Rock</td><td>Facile</td><td><a href="tabs/tab16.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock facile"><td>Do i wanna know</td><td>Artic Monkeys</td><td>Indie Rock/Rock Alternativo</td><td>Facile</td><td><a href="tabs/tab17.html" target="_blank">Apri</a></td></tr>
+    <tr class="metal intermedio"><td>Breaking the law</td><td>Judas Priest</td><td>Heavy Metal</td><td>Facile/Intermedio</td><td><a href="tabs/tab18.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock intermedio"><td>Zombie</td><td>The Cranberries</td><td>Rock Alternativo/Post-Grunge</td><td>Intermedio</td><td><a href="tabs/tab19.html" target="_blank">Apri</a></td></tr>
+    <tr class="metal difficile"><td>Master Of Puppets</td><td>Metallica</td><td>Trash Metal</td><td>Molto Difficile/Difficile</td><td><a href="tabs/tab20.html" target="_blank">Apri</a></td></tr>
+    <tr class="metal difficile"><td>Crazy Train</td><td>Ozzy Osbourne</td><td>Heavy Metal</td><td>Difficile</td><td><a href="tabs/tab21.html" target="_blank">Apri</a></td></tr>
+    <tr class="pop facile"><td>Riptide</td><td>Vance Joy</td><td>Indie Folk/Indie Pop</td><td>Facile</td><td><a href="tabs/tab22.html" target="_blank">Apri</a></td></tr>
+    <tr class="rock intermedio"><td>Supermassive Black Hole</td><td>Muse</td><td>Rock Alternativo/Funk Rock</td><td>Intermedio</td><td><a href="tabs/tab23.html" target="_blank">Apri</a></td></tr>
+    <tr class="pop intermedio"><td>Sweater Weather</td><td>The Neighbourhood</td><td>Indie Pop/Rock Alternativo</td><td>Intermedio</td><td><a href="tabs/tab24.html" target="_blank">Apri</a></td></tr>
+
+  </tbody>
+</table>
+ </div>
+
+
 
   <!-- Sezione: Approfondimenti Tecnici -->
   <div class="container section">
@@ -169,5 +278,38 @@
   <footer>
     <p>&copy; 2025 Tutorial Chitarra. Tutti i diritti riservati.</p>
   </footer>
+  <script>
+  function filterTabs() {
+ var searchValue = document.getElementById("searchBar").value.toLowerCase();
+ var genreFilter = document.getElementById("genreFilter").value.toLowerCase();
+ var difficultyFilter = document.getElementById("difficultyFilter").value.toLowerCase();
+ var artistFilter = document.getElementById("artistFilter").value.toLowerCase();
+
+ var rows = document.getElementById("tabsTable").getElementsByTagName("tr");
+
+ for (var i = 0; i < rows.length; i++) {
+   var row = rows[i];
+
+   // Ottieni i dati della riga
+   var song = row.cells[0].textContent.toLowerCase();
+   var artist = row.cells[1].textContent.toLowerCase();
+   var genre = row.cells[2].textContent.toLowerCase();
+   var difficulty = row.cells[3].textContent.toLowerCase();
+
+   // Controlla se la riga soddisfa i filtri
+   var matchesSearch = song.includes(searchValue);
+   var matchesGenre = genreFilter === "" || genre.includes(genreFilter);
+   var matchesDifficulty = difficultyFilter === "" || difficulty.includes(difficultyFilter);
+   var matchesArtist = artistFilter === "" || artist.includes(artistFilter);
+
+   // Mostra o nascondi la riga in base ai filtri
+   if (matchesSearch && matchesGenre && matchesDifficulty && matchesArtist) {
+     row.style.display = "";
+   } else {
+     row.style.display = "none";
+   }
+ }
+}
+ </script>
 </body>
 </html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="frame-src *;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduzione alle Note Musicali</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      font-size: 24px;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 120px auto 20px;
+      padding: 20px;
+      background: #1f1f1f;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        background-color: #444;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .back-button:hover {
+      background-color: #e6b800;
+    }
+    .video-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 10px;
+    }
+    .section {
+      margin: 40px 0;
+      padding: 20px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #222;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      display: block;
+      color: white; /* Titoli e testi di default in bianco */
+    }
+    .section:hover {
+      background-color: #222;
+      transform: translateY(-10px);
+      color: grey; /* Testo diventa grigio in hover */
+    }
+    .section h2, .section h3, .section h4 {
+      color: white;  /* Titoli in bianco */
+    }
+    p, li {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    /* Lista delle note musicali con mini-video in layout a griglia */
+    .note-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .note-item {
+      flex: 1 1 45%;
+      background: #1f1f1f;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .note-item h4 {
+      margin-top: 0;
+      color: white;
+    }
+    .note-item iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 5px;
+    }
+    /* Media container per rappresentazione grafica e altri contenuti affiancati */
+    .media {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .media img, .media iframe {
+      flex: 1 1 45%;
+      border-radius: 5px;
+    }
+    img {
+    max-width: 100%;  /* Le immagini non superano la larghezza del container */
+    height: auto;  /* Mantiene le proporzioni */
+    display: block; /* Evita spazi indesiderati */
+    margin: 0 auto; /* Le centra */
+}
+img[src$=".png"] {
+    background-color: white !important; /* Forza lo sfondo bianco */
+}
+  </style>
+</head>
+<body>
+  <header>Introduzione alle Note Musicali</header>
+  <nav>
+      <a href="index.html">Home</a>
+      <a href="teoria.html">Teoria</a>
+      <a href="esercizi.html">Esercizi</a>
+      <a href="accordi.html">Accordi</a>
+      <a href="tabs.html">Tabs</a>
+      <a href="quiz.html">Quiz</a>
+  </nav>
+
+  <div class="container">
+    <!-- Tasto per tornare alla lezione -->
+    <a href="teoria.html" class="back-button">← Torna alla Lezione</a>
+
+    <!-- Video introduttivo generale -->
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+    </div>
+
+    <!-- Parte 1: Origini e Definizione delle Note Musicali -->
+    <div class="section">
+      <h2>Origini e Definizione</h2>
+      <p>La notazione musicale è un sistema di segni grafici usati per rappresentare i suoni. In particolare, le note scritte sul pentagramma indicano sia l'altezza che la durata dei suoni.</p>
+      <h3>Origini:</h3>
+      <ul>
+        <li><strong>Antichità</strong>: Non avevano una notazione specifica, usavano le lettere dell'alfabeto per rappresentare i suoni della scala diatonica.</li>
+        <li><strong>Medioevo</strong>: Con l'aumentare della complessità dei canti, nacquerò i primi aiuti chiamati neumi, scritti sopra il testo per indicare la direzione della melodia.</li>
+        <li><strong>Ora:</strong>: Da questi, venne introdotto il tetragramma, attribuito a Guido d'Arezzo, che facilitava la memorizzazione dei canti, Francone da Colonia, inventò la scrittura delle durate basata su rapporti proporzionali, che indicava la durata delle note in relazione tra loro.</li>
+      </ul>
+      <h3>Nomenclatura note:</h3>
+      <ul>
+        <li>I nomi delle note, nei paesi latini, risalgono all'XI sec. e derivano dalle sillabe iniziali dei versetti dell'inno «Ut queant laxis».</li>
+        <li>In origine le note erano: ut, re, mi, fa, sol, la. Nel XVI sec si aggiunse la settima nota, "si" e nel XVII la nota "ut" viene sostituita da "do"</li>
+      </ul>
+
+
+    </div>
+
+    <!-- Parte 2: Lista delle Note Musicali con Mini-Video -->
+    <div class="section">
+      <h2>Le 8 Note Musicali:</h2>
+      <p>Le note musicali sono:Do, Re, Mi, Fa, Sol, La, Si. Prova a suonarle anche te con questo video!</p>
+      <div class="note-list">
+        <div class="note-item">
+
+          <iframe src="https://www.youtube.com/embed/L30lacfkcUs" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Parte 3: Struttura e Rappresentazione Grafica delle Note -->
+    <div class="section">
+      <h2>Struttura e Rappresentazione Grafica</h2>
+      <p>Le note vengono disposte sul pentagramma, che è formato da cinque linee parallele, la loro posizione determina l'altezza del suono.</p>
+       <h3>Ogni nota si compone di elementi grafici:</h3>
+      <ul>
+        <li>Testa: la parte circolare o ellittica sopra, che può essere vuota o riempita per indicare differenti valori.</li>
+        <li>Gambo: una barra verticale collegata alla testa, il cui orientamento (verso l'alto o il basso) segue regole estetiche e funzionali.</li>
+        <li>Code (o codette): tratti aggiuntivi attaccati al gambo, utilizzati per rappresentare valori di durata più brevi.</li>
+        <li>Se due o più note con code si susseguono, vengono unite da travature, ovvero bande orizzontali che collegano i gambi.</li>
+      </ul>
+
+
+        <img src="parts_note.png" alt="Parti Note">
+
+
+      <h3>Altri aspetti della notazione:</h3>
+      <ul>
+        <li>Oltre alle note, include simboli per indicare pause (momenti di silenzio) e diverse figure ritmiche che esprimono la durata dei suoni e dei silenzi.</li>
+        <li>Il sistema si è evoluto nel tempo per permettere di scrivere in modo preciso e standardizzato la musica, rendendo più possibile la diffusione e l'interpretazione di opere musicali complesse.</li>
+      </ul>
+
+    </div>
+
+
+
+
+    <!-- Parte 5: Definizione dell'Altezza (Pitch) -->
+    <div class="section">
+      <h2>Definizione dell'Altezza (Pitch)</h2>
+      <p>L'altezza di suono è la caratteristica che ci permette di distinguerlo come grave o acuto.</p>
+      <p>Essa dipende dalla frequenza fondamentale: suoni a bassa frequenza risultano gravi, mentre quelli a frequenza elevata app</p>
+      <ul>
+        <li>L'umano può percepire da circa 16 Hz a 20.000 Hz, anche se la musica pratica si concentra in un intervallo più ristretto (es. un pianoforte da 88 tasti, quindi standard, copre da 55 Hz fino a 8400 Hz).</li>
+        <li>La minima differenza percepibile è dell'ordine di 5 cent, una quantità molto piccola che può variare in base a fattori come il volume o la presenza di armonici.</li>
+      </ul>
+      <h3>Fattori influenzanti e percezione</h3>
+      <p>La percezione dell'altezza non dipende solo dalla frequenza, essa è influenzata anche dall'intensità del suono (es. una nota grave suonata a bassa intensità può essere percepita ancora più grave.)</p>
+      <ul>
+        <li>Legge di Weber-Fechner: la percezione sensoriale dell'altezza segue una scala logaritmica, cioè le piccole variazioni in frequenze basse sono più evidenti rispetto a quelle a frequenze alte.</li>
+        <li>Alcune illusioni uditive, come Scala di Shepard o <a href:"https://it.wikipedia.org/wiki/Tritono#:~:text=Il%20paradosso%20del%20tritono%20%C3%A8,sequenza%20%C3%A8%20ascendente%20o%20discendente." target:"_blank">paradosso del tritono</a>, mostrano come possiamo essere ingannati, facendo apparire una sequenza di toni come se fosse infinitamente ascendente o discendente.</li>
+      </ul>
+      <div class="media">
+        <iframe  src="https://www.youtube.com/embed/56fm4JMLfu0"  allowfullscreen></iframe>
+      </div>
+      <h3>Fattori fisici che influenzano l'altezza negli strumenti a corda</h3>
+      <p>Per strumenti a suono determinato, come il pianoforte o gli archi, l'altezza di una nota è inflenzata da tre fattori fondamentali:</p>
+      <ul>
+        <li>Lunghezza della corda: Una corda più lunga vibra più lentamente, quindi produce un suono più grave. In altre parole, la frequenza è inversamente proporzionale alla lunghezza (f ∝ 1/l/l).</li>
+        <li>Tensione della corda: Aumentando la tensione, la corda vibra più rapidamente, producendo un suono più acuto (f ∝ √T).</li>
+        <li>Densità della Corda: Una corda con maggiore massa per unità di lunghezza vibra più lentamente, risultando in un suono più grave (f ∝ 1/√ρ).</li>
+      </ul>
+        <img src="frequenze_note.png" alt="Esempio di altezza">
+    </div>
+
+    <!-- Parte 6: Valori delle Note e delle Pause -->
+    <div class="section">
+      <h2>Valori delle Note e delle Pause</h2>
+      <p>Le note e le pause hanno valori e simboli specifici che indicano la loro durata. I valori delle note e pause sono:</p>
+
+      <ul>
+        <li>Semibreve, dura un intero (4/4) cioè 4 battiti.</li>
+        <li>Minima, dura un mezzo (2/4) cioè 2 battiti.</li>
+        <li>Semiminima, dura un quarto (1/4) cioè 1 battiti.</li>
+        <li>Croma, dura un ottavo (1/48) cioè mezzo battito.</li>
+        <li>Semicroma, dura un sedicesimo (1/16) cioè un quarto di battito.</li>
+        <li>Biscroma, dura un trentaduesimo (1/32) cioè un ottavo di battito.</li>
+        <li>Semibiscroma, dura un sessantaquattresimo (1/64) cioè sedicesimo di battito.</li>
+      </ul>
+        <p>Modificatori: L'aggiunta di uno, due o tre punti dopo la testa di una nota incrementa la sua durata: il primo aggiunge metà del valore originale, il secondo metà del valore del punto precedente, e così via.</p>
+        <div class="media">
+          <img src="valore_note_pause.webp" alt="Valori delle note e delle pause">
+          
+        </div>
+        <p>In alcune composizioni le note vengono raggruppate in maniera che non seguano la suddivisione naturale del tempo (detta misura), generando gruppi irregolari.</p>
+        <p>Questi si classificano in:</p>
+
+      <ul>
+        <li><strong>Irregolari per eccesso</strong>: ad esempio, terzine e sestine, in cui si eseguono più note rispetto alla suddivisione prevista in un tempo semplice.</li>
+        <li><strong>Irregolari per diminuzione</strong>: come le duine o quartine, in cui si eseguono meno note in un tempo composto rispetto a quanto atteso.</li>
+        <li><strong>Irregolari per formazione</strong>: gruppi di 5, 7, 11 note (quintine, settimine, ecc.) che non seguono nè un ritmo binario nè ternario e risultano più complessi da eseguire.</li>
+      </ul>
+
+      <p>I gruppi irregolari sono indicati con una legatura (o un gruppo di travature) e un numero che specifica il rapporto del gruppo. Possono essere <strong>"semplici"</strong> (note di stesso valore), <strong>"composti"</strong> (note di valori differenti) o <strong>"complessi"</strong> (contenenti ulteriori gruppi irregolari).</p>
+    </div>
+
+    <!-- Parte 7: Struttura del Pentagramma -->
+    <div class="section">
+      <h2>Pentagramma</h2>
+      <p>Il pentagramma è un insieme di cinque linee orizzontali parallele che creano quattro spazi. Sul pentagramma vengono scritte le note, le pause e altri simboli musicali. La posizione di una nota (sulle linee o negli spazi) determina l'altezza del suono.</p>
+      <div class="media">
+        <img src="semiografia-musicale.webp" alt="Struttura del pentagramma">
+      </div>
+    </div>
+      <h3>Chiavi musicali:</h3>
+      <p>All'inizio del pentagramma si inseriscono le chiavi che definiscono quali note corrispondono a ciascuna posizione. Sono tutte posizionate su un rigo diverso, al quale danno il nome.</p>
+      <p>Le chiavi musicali sono:</p>
+      <ul>
+        <li><strong>Chiave di violino</strong> (o di sol): posizionata sul secondo rigo, è utilizzata sul violino, flauto, chitarra, pianoforte.</li>
+        <li><strong>Chiave di basso</strong> (o di fa): posizionata sul quarto rigo, è utilizzata dalla viola, violoncello, trombone, oboe, corno inglese, fagotto, contrabbasso.</li>
+        <li><strong>Chiave di baritono</strong>: posizionata sul terzo rigo, è utilizzata da strumenti a tastiera.</li>
+        <li><strong>Chiave di soprano</strong>: posizionata sul primo rigo, è utilizzata da strumenti a tastiera.</li>
+        <li><strong>Chiave di mezzosoprano</strong>: posizionata sul secondo rigo.</li>
+        <li><strong>Chiave di contralto</strong>: posizionata sul tero rigo, è utilizzata da strumenti a tastiera, viola, viola da gamba, trombone tenore e contralto, mandola, corno inglese.</li>
+        <li><strong>Chiave di tenore</strong> (o di do): posizionata sul quarto rigo, è utilizzata dal trombone tenore, fagotto, eufonio, violoncello, contrabbasso.</li>
+      </ul>
+      <div class="media">
+        <img src="clef.jpg" alt="Struttura del pentagramma">
+      </div>
+      <h3>Tipologie di pentagramma:</h3>
+      <p>Esistono vari tipi di pentagramma e sono:</p>
+      <ul>
+        <li><strong>Semplice o singolo:</strong> usato per la voce o strumenti con un'estensione limitata, come la chitarra.</li>
+        <div class="media">
+          <img src="pentagramma_singolo.png" alt="Pentagramma Singolo">
+        </div>
+        <li><strong>Doppio:</strong> tipico per strumenti come il pianoforte, dove i due pentagrammi distinguono le mani destra e sinistra.</li>
+        <div class="media">
+          <img src="pentagramma_doppio.png" alt="Pentagramma Doppio">
+        </div>
+        <li><strong>Triplo o multiplo:</strong> impiegati per organi o partiture complesse che richiedono più registri.</li>
+        <div class="media">
+          <img src="pentagramma_triplo.png" alt="Pentagramma Triplo">
+        </div>
+        </ul>
+
+        <h3>Misure e suddivisoni:</h3>
+        <p>Sul pentagramma vengono tracciate linee verticali, chiamate stanghette, che determinano le misure (la durata delle 4/4 battute).</p>
+      <p>Nella prima misura viene specificata la chiave, seguita dall'armatura di chiave (tonalità/scala in cui il brano è scritto). All'inizio del brano viene l'indicazione del metro, ovvero del numero e del valore dei tempi di ogni misura.</p>
+      <div class="media">
+        <img src="pentagramma-metro-ritmo-tempo.png" alt="Struttura del pentagramma">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
